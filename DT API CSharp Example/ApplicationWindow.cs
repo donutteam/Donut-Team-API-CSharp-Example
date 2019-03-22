@@ -5,9 +5,9 @@ namespace DT_API_CSharp_Example
 	{
 		public ApplicationWindow() { InitializeComponent(); }
 
-		private readonly System.Net.Http.HttpClient HTTPClient	= new System.Net.Http.HttpClient();
-		private string LookupKey								= null;
-		private string AccountKey								= null;
+		private readonly System.Net.Http.HttpClient HTTPClient = new System.Net.Http.HttpClient();
+		private string LookupKey = null;
+		private string AccountKey = null;
 
 		private void Reset(bool ChangeResponse = true)
 		{
