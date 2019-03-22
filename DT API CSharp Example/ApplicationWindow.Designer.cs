@@ -1,6 +1,6 @@
 ﻿namespace DT_API_CSharp_Example
 {
-	partial class Form1
+	partial class ApplicationWindow
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -134,9 +134,9 @@
 			// Response_txt
 			// 
 			this.Response_txt.AcceptsTab = true;
-			this.Response_txt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.Response_txt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+			| System.Windows.Forms.AnchorStyles.Left)
+			| System.Windows.Forms.AnchorStyles.Right)));
 			this.Response_txt.Location = new System.Drawing.Point(70, 68);
 			this.Response_txt.Name = "Response_txt";
 			this.Response_txt.ReadOnly = true;
@@ -155,8 +155,8 @@
 			// 
 			// AppKey_txt
 			// 
-			this.AppKey_txt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.AppKey_txt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+			| System.Windows.Forms.AnchorStyles.Right)));
 			this.AppKey_txt.Location = new System.Drawing.Point(70, 39);
 			this.AppKey_txt.Name = "AppKey_txt";
 			this.AppKey_txt.Size = new System.Drawing.Size(518, 20);
@@ -174,8 +174,8 @@
 			// 
 			// Domain_txt
 			// 
-			this.Domain_txt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.Domain_txt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+			| System.Windows.Forms.AnchorStyles.Right)));
 			this.Domain_txt.Location = new System.Drawing.Point(70, 16);
 			this.Domain_txt.Name = "Domain_txt";
 			this.Domain_txt.Size = new System.Drawing.Size(518, 20);

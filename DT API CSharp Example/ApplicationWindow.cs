@@ -1,9 +1,9 @@
 ﻿
 namespace DT_API_CSharp_Example
 {
-	public partial class Form1 : System.Windows.Forms.Form
+	public partial class ApplicationWindow : System.Windows.Forms.Form
 	{
-		public Form1() { InitializeComponent(); }
+		public ApplicationWindow() { InitializeComponent(); }
 
 		private readonly System.Net.Http.HttpClient HTTPClient	= new System.Net.Http.HttpClient();
 		private string LookupKey								= null;
