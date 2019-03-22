@@ -104,6 +104,7 @@
 			this.Deauth_btn.TabIndex = 3;
 			this.Deauth_btn.Text = "Deauthenticate";
 			this.Deauth_btn.UseVisualStyleBackColor = true;
+			this.Deauth_btn.Click += new System.EventHandler(this.Deauth_btn_Click);
 			// 
 			// ProfileLookup_btn
 			// 
@@ -134,9 +135,9 @@
 			// Response_txt
 			// 
 			this.Response_txt.AcceptsTab = true;
-			this.Response_txt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-			| System.Windows.Forms.AnchorStyles.Left)
-			| System.Windows.Forms.AnchorStyles.Right)));
+			this.Response_txt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.Response_txt.Location = new System.Drawing.Point(70, 68);
 			this.Response_txt.Name = "Response_txt";
 			this.Response_txt.ReadOnly = true;
@@ -155,8 +156,8 @@
 			// 
 			// AppKey_txt
 			// 
-			this.AppKey_txt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-			| System.Windows.Forms.AnchorStyles.Right)));
+			this.AppKey_txt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.AppKey_txt.Location = new System.Drawing.Point(70, 39);
 			this.AppKey_txt.Name = "AppKey_txt";
 			this.AppKey_txt.Size = new System.Drawing.Size(518, 20);
@@ -174,8 +175,8 @@
 			// 
 			// Domain_txt
 			// 
-			this.Domain_txt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-			| System.Windows.Forms.AnchorStyles.Right)));
+			this.Domain_txt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.Domain_txt.Location = new System.Drawing.Point(70, 16);
 			this.Domain_txt.Name = "Domain_txt";
 			this.Domain_txt.Size = new System.Drawing.Size(518, 20);
@@ -191,14 +192,14 @@
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Domain:";
 			// 
-			// Form1
+			// ApplicationWindow
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.groupBox1);
-			this.Name = "Form1";
+			this.Name = "ApplicationWindow";
 			this.Text = "Donut Team API C# Example";
 			this.groupBox1.ResumeLayout(false);
 			this.panel1.ResumeLayout(false);

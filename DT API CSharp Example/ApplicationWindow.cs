@@ -116,5 +116,12 @@ namespace DT_API_CSharp_Example
 				this.Deauth_btn.Enabled = true;
 			}
 		}
+
+		private async void Deauth_btn_Click(object sender, System.EventArgs e)
+		{
+			System.Xml.XmlDocument Response = await this.DonutTeamAPI("Deauthenticate", this.AccountKey);
+
+			this.Reset(false);
+		}
 	}
 }
