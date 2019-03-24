@@ -31,7 +31,7 @@ namespace DT_API_CSharp_Example
 
 			try
 			{
-				Response = await this.HTTPClient.GetAsync(this.Domain_txt.Text + "/" + Endpoint + ".xml/" + Path);
+				Response = await this.HTTPClient.GetAsync(this.Domain_txt.Text + "/" + Endpoint + ".xml/" + Path); // Example URL: https://api.donutteam.com/Deauthenticate.xml/{SessionIdentifier}
 			}
 			catch (System.Net.Http.HttpRequestException Exception)
 			{
@@ -64,9 +64,7 @@ namespace DT_API_CSharp_Example
 
 			System.Xml.XmlNodeList Errors = Data.GetElementsByTagName("ErrorText");
 			foreach (System.Xml.XmlNode Error in Errors)
-			{
 				System.Windows.Forms.MessageBox.Show(Error.InnerText, "API Call Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
-			}
 
 			return Data;
 		}
@@ -114,7 +112,7 @@ namespace DT_API_CSharp_Example
 
 		private async void ProfileLookup_btn_Click(object sender, System.EventArgs e)
 		{
-			System.Xml.XmlDocument Response = await this.DonutTeamAPI("ProfileLookup", "session/" + this.AccountKey);
+			System.Xml.XmlDocument Response = await this.DonutTeamAPI("User", "session/" + this.AccountKey);
 
 			if (Response == null)
 				return;
