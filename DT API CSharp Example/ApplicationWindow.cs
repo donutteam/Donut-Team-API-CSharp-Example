@@ -3,7 +3,7 @@ namespace DT_API_CSharp_Example
 {
 	public partial class ApplicationWindow : System.Windows.Forms.Form
 	{
-		public ApplicationWindow() { InitializeComponent(); }
+		public ApplicationWindow() => InitializeComponent();
 
 		private readonly System.Net.Http.HttpClient HTTPClient = new System.Net.Http.HttpClient();
 		private string LookupKey = null;
@@ -38,8 +38,8 @@ namespace DT_API_CSharp_Example
 #if DEBUG
 				throw Exception;
 #else
-				System.Windows.Forms.MessageBox.Show("Unsuccessful", "Response Fail", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
-				return;
+				System.Windows.Forms.MessageBox.Show(Exception.Message, "Response Fail", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+				return null;
 #endif
 			}
 
@@ -57,8 +57,8 @@ namespace DT_API_CSharp_Example
 #if DEBUG
 				throw Exception;
 #else
-				System.Windows.Forms.MessageBox.Show("Response not XML document", "Response Fail", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
-				return;
+				System.Windows.Forms.MessageBox.Show(Exception.Message, "Response Fail", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+				return null;
 #endif
 			}
 
@@ -76,6 +76,9 @@ namespace DT_API_CSharp_Example
 			this.Reset(true);
 
 			System.Xml.XmlDocument Response = await this.DonutTeamAPI("RequestAuthentication", this.AppKey_txt.Text);
+
+			if (Response == null)
+				return;
 
 			System.Xml.XmlNode CodeNode = Response.SelectSingleNode("//Code");
 			if (CodeNode == null)
@@ -97,6 +100,9 @@ namespace DT_API_CSharp_Example
 		{
 			System.Xml.XmlDocument Response = await this.DonutTeamAPI("CheckAuthenticateToken", this.AppKey_txt.Text + "/" + this.LookupKey);
 
+			if (Response == null)
+				return;
+
 			int HasSessionToken = Response.GetElementsByTagName("SessionToken").Count;
 			if (HasSessionToken == 1)
 			{
@@ -110,6 +116,9 @@ namespace DT_API_CSharp_Example
 		{
 			System.Xml.XmlDocument Response = await this.DonutTeamAPI("ProfileLookup", "session/" + this.AccountKey);
 
+			if (Response == null)
+				return;
+
 			int HasUserElement = Response.GetElementsByTagName("User").Count;
 			if (HasUserElement == 1)
 			{
@@ -120,6 +129,9 @@ namespace DT_API_CSharp_Example
 		private async void Deauth_btn_Click(object sender, System.EventArgs e)
 		{
 			System.Xml.XmlDocument Response = await this.DonutTeamAPI("Deauthenticate", this.AccountKey);
+
+			if (Response == null)
+				return;
 
 			this.Reset(false);
 		}

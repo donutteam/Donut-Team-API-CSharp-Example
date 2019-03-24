@@ -35,7 +35,7 @@
 			this.Deauth_btn = new System.Windows.Forms.Button();
 			this.ProfileLookup_btn = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.Response_txt = new System.Windows.Forms.RichTextBox();
+			this.Response_txt = new LucasStuff.ThemedRichTextBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.AppKey_txt = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
@@ -220,7 +220,7 @@
 		private System.Windows.Forms.TextBox AppKey_txt;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.RichTextBox Response_txt;
+		private LucasStuff.ThemedRichTextBox Response_txt;
 		private System.Windows.Forms.Button Deauth_btn;
 		private System.Windows.Forms.Button ResetBtn;
 	}
